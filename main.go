@@ -20,9 +20,6 @@ func main() {
 	// block execution until an OS signal (such as Ctrl-C) is received:
 	<-osInterruptChannel
 	terminate <- true
-
-	//close(polled)
-	//close(terminate)
 }
 
 func pollingWorker(terminate <-chan bool, polled chan<- time.Time) {
